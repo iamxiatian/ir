@@ -1,11 +1,8 @@
 \documentclass[table, t,13pt]{beamer} 
 \usepackage{graphicx}
 \usepackage{xeCJK,fontspec,xunicode,xltxtra, fancybox}
+%\usepackage{xeCJK,fontspec,xunicode,xltxtra, beamerthemesplit, fancybox}
 
-\setmainfont[Mapping=tex-text,LetterSpace=1.25]{Ubuntu}
-\setsansfont[Mapping=tex-text,LetterSpace=1.25]{Ubuntu Light}
-\setmonofont[Color=00663300]{Ubuntu Light}
-\setCJKmainfont{Microsoft YaHei} 
 
 %box tools
 \usepackage{framed, color}
@@ -14,6 +11,17 @@
 %\usecolortheme[RGB={130,120,232}]{structure} 
 \usetheme{Boadilla} 
 \usecolortheme{default} 
+
+
+\setbeamertemplate{items}[ball] 
+\setbeamertemplate{blocks}[rounded][shadow=true] 
+
+\setmainfont[Mapping=tex-text,LetterSpace=-1.25]{Ubuntu Light}
+\setsansfont[Mapping=tex-text,LetterSpace=-1.25]{Ubuntu Light}
+\setmonofont[Color=00663300]{Ubuntu Light}
+
+\setCJKmainfont{Microsoft YaHei} 
+
 
 
 \usepackage{listings}
@@ -32,7 +40,7 @@
 
 \title{Information Retrieval}
 \author{Xia Tian}
-\institute{Renmin Univ of China}
+\institute{Renmin University of China}
 %\date{\today{}}
 \date{}  %不在首页显示日期
 \frame{\titlepage}
