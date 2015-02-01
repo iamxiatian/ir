@@ -1,2 +1,3 @@
-# ir
+# Information Retrieval
+
 Course of Information Retrieval
