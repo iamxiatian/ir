@@ -3,9 +3,23 @@
 \usepackage{xeCJK,fontspec,xunicode,xltxtra, fancybox}
 %\usepackage{xeCJK,fontspec,xunicode,xltxtra, beamerthemesplit, fancybox}
 
-
 %box tools
 \usepackage{framed, color}
+
+
+\usepackage[tikz]{bclogo}  %see http://mirrors.ctan.org/graphics/bclogo/README
+\DeclareGraphicsRule{.mps}{eps}{*}{} %解决xelatex处理bclogo时的mps问题
+\newcommand{\infobox}[2]{ 
+    \begin{bclogo}[couleur=yellow!10, logo=\bcfleur, ombre=true]{#1}
+    #2
+    \end{bclogo}
+}
+\newcommand{\warnbox}[2]{ 
+    \begin{bclogo}[couleur=yellow!10, logo=\bctakecare, ombre=true]{#1}
+    #2
+    \end{bclogo}
+}
+
 
 %\usetheme[height=8mm]{Madrid} % Favorite theme is Madrid! 
 %\usecolortheme[RGB={130,120,232}]{structure} 
@@ -20,9 +34,8 @@
 \setsansfont[Mapping=tex-text,LetterSpace=-1.25]{Ubuntu Light}
 \setmonofont[Color=00663300]{Ubuntu Light}
 
-\setCJKmainfont{Microsoft YaHei} 
-
-
+%\setCJKmainfont{Microsoft YaHei} 
+\setCJKmainfont{FZLanTingHeiS-EL-GB} 
 
 \usepackage{listings}
 
@@ -33,16 +46,18 @@
 %\parindent=15pt
 \linespread{1.1}
 
+
+
 \begin{document}
-\XeTeXlinebreaklocale "zh"  % 琛ㄧず鐢ㄤ腑鏂囩殑鏂
-\XeTeXlinebreakskip = 0pt plus 1pt % 澶氫竴鐐硅皟鏁寸殑绌洪棿
+\XeTeXlinebreaklocale "zh"  
+\XeTeXlinebreakskip = 0pt plus 1pt 
 
 
 \title{Information Retrieval}
 \author{Xia Tian}
 \institute{Renmin University of China}
 %\date{\today{}}
-\date{}  %涓嶅湪棣栭〉鏄剧ず鏃ユ湡
+\date{}  
 \frame{\titlepage}
 
 \lstset{breakatwhitespace,
